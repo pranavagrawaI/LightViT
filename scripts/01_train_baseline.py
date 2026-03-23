@@ -1,15 +1,25 @@
 # scripts/01_train_baseline.py
+import os
+import sys
+from pathlib import Path
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
-from models.baseline_vit import LightViTBaseline
-from core.metrics import count_parameters, measure_latency_ms, measure_model_size_mb
-import os
+from tqdm import tqdm
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 
 def main():
+    from core.metrics import count_parameters, measure_latency_ms, measure_model_size_mb
+    from models.baseline_vit import LightViTBaseline
+    
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"[*] Forging on device: {device}")
 
@@ -31,14 +41,14 @@ def main():
     )
 
     trainset = torchvision.datasets.CIFAR100(
-        root="./data", train=True, download=True, transform=transform_train
+        root=PROJECT_ROOT / "data", train=True, download=True, transform=transform_train
     )
     trainloader = torch.utils.data.DataLoader(
         trainset, batch_size=128, shuffle=True, num_workers=2
     )
 
     testset = torchvision.datasets.CIFAR100(
-        root="./data", train=False, download=True, transform=transform_test
+        root=PROJECT_ROOT / "data", train=False, download=True, transform=transform_test
     )
     testloader = torch.utils.data.DataLoader(
         testset, batch_size=128, shuffle=False, num_workers=2
@@ -64,12 +74,18 @@ def main():
     # 4. The Training Loop
     epochs = 100
     best_acc = 0.0
-    os.makedirs("checkpoints", exist_ok=True)
+    checkpoints_dir = PROJECT_ROOT / "checkpoints"
+    os.makedirs(checkpoints_dir, exist_ok=True)
 
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
-        for inputs, targets in trainloader:
+        train_progress = tqdm(
+            trainloader,
+            desc=f"Epoch {epoch + 1}/{epochs} [train]",
+            leave=False,
+        )
+        for batch_idx, (inputs, targets) in enumerate(train_progress, start=1):
             inputs, targets = inputs.to(device), targets.to(device)
 
             optimizer.zero_grad()
@@ -81,6 +97,7 @@ def main():
             torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
             optimizer.step()
             running_loss += loss.item()
+            train_progress.set_postfix(loss=f"{running_loss / batch_idx:.3f}")
 
         scheduler.step()
 
@@ -89,12 +106,18 @@ def main():
         correct = 0
         total = 0
         with torch.no_grad():
-            for inputs, targets in testloader:
+            val_progress = tqdm(
+                testloader,
+                desc=f"Epoch {epoch + 1}/{epochs} [val]",
+                leave=False,
+            )
+            for inputs, targets in val_progress:
                 inputs, targets = inputs.to(device), targets.to(device)
                 outputs = model(inputs)
                 _, predicted = outputs.max(1)
                 total += targets.size(0)
                 correct += predicted.eq(targets).sum().item()
+                val_progress.set_postfix(acc=f"{100.0 * correct / total:.2f}%")
 
         acc = 100.0 * correct / total
         print(
@@ -103,7 +126,10 @@ def main():
 
         if acc > best_acc:
             best_acc = acc
-            torch.save(model.state_dict(), "checkpoints/baseline_fp32.pth")
+            torch.save(
+                {"state_dict": model.state_dict()},
+                checkpoints_dir / "baseline_fp32.pth",
+            )
             print(f"[*] New Best Baseline Saved! ({best_acc:.2f}%)")
 
 

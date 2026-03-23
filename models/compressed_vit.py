@@ -22,6 +22,9 @@ class CompressedLightViT(LightViTBaseline):
         rank = max(1, int(min(input_dim, output_dim) * self.rank_ratio))
         self.head = LowRankLinear(input_dim, output_dim, rank)
 
+
+
+
     def forward(self, images: torch.Tensor) -> torch.Tensor:
         if isinstance(self.head, nn.Linear):
             self.apply_low_rank_head()
