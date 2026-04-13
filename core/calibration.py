@@ -11,6 +11,7 @@ from torch import nn
 class CovarianceCalibrator:
     def __init__(self) -> None:
         self.covariances: dict[str, torch.Tensor] = defaultdict(lambda: torch.empty(0))
+        self.sample_counts: dict[str, int] = defaultdict(int)
         self._handles: list[torch.utils.hooks.RemovableHandle] = []
 
     def _hook(self, name: str):
@@ -21,6 +22,7 @@ class CovarianceCalibrator:
                 self.covariances[name] = covariance
             else:
                 self.covariances[name] = self.covariances[name] + covariance
+            self.sample_counts[name] += features.shape[0]
 
         return capture
 
@@ -31,6 +33,13 @@ class CovarianceCalibrator:
 
     def clear(self) -> None:
         self.covariances.clear()
+        self.sample_counts.clear()
+
+    def normalized_covariances(self) -> dict[str, torch.Tensor]:
+        return {
+            name: covariance / max(1, self.sample_counts[name])
+            for name, covariance in self.covariances.items()
+        }
 
     def remove(self) -> None:
         for handle in self._handles:

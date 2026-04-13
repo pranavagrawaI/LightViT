@@ -39,3 +39,9 @@ data/*
 runs/
 outputs/
 results/
+checkpoints/*.pth
+checkpoints/**/*.pth
+
+
+# Editor and IDE specific files
+.codex
