@@ -1,0 +1,7 @@
+stage,family,rank_ratio,checkpoint,source_checkpoint,params,model_size_mb,checkpoint_mb,latency_ms,top1_accuracy,calibration_batches,calibration_keys
+baseline,baseline,1.0,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,,5410084,20.6378,20.6915,3.2729,63.6000,50,37
+decomposed,act_svd,0.125,/home/hipra/projects/lightvit/checkpoints/act_svd/act_svd_rank_ratio_0p125.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,1081300,4.1248,4.2290,4.7970,14.2100,50,37
+decomposed,act_svd,0.1875,/home/hipra/projects/lightvit/checkpoints/act_svd/act_svd_rank_ratio_0p1875.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,1580716,6.0300,6.1343,3.6039,24.6300,50,37
+decomposed,act_svd,0.25,/home/hipra/projects/lightvit/checkpoints/act_svd/act_svd_rank_ratio_0p25.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,2080424,7.9362,8.0401,3.6243,36.2200,50,37
+decomposed,act_svd,0.375,/home/hipra/projects/lightvit/checkpoints/act_svd/act_svd_rank_ratio_0p375.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,3079256,11.7464,11.8506,3.9053,52.1200,50,37
+decomposed,act_svd,0.5,/home/hipra/projects/lightvit/checkpoints/act_svd/act_svd_rank_ratio_0p5.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,4078380,15.5578,15.6614,4.9259,59.0100,50,37

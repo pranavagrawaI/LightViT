@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect x="0" y="0" width="1200" height="760" fill="#ffffff" />
+<text x="600.0" y="36.0" font-size="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#1f2933">Pareto Summary: Size vs Accuracy</text>
+<line x1="92.0" y1="668.0" x2="920.0" y2="668.0" stroke="#334155" stroke-width="1.5" />
+<line x1="92.0" y1="78.0" x2="92.0" y2="668.0" stroke="#334155" stroke-width="1.5" />
+<line x1="92.0" y1="78.0" x2="92.0" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="92.0" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">0</text>
+<line x1="277.7" y1="78.0" x2="277.7" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="277.7" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">5.0</text>
+<line x1="463.5" y1="78.0" x2="463.5" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="463.5" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">10</text>
+<line x1="649.2" y1="78.0" x2="649.2" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="649.2" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">15</text>
+<line x1="835.0" y1="78.0" x2="835.0" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="835.0" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">20</text>
+<line x1="92.0" y1="586.9" x2="920.0" y2="586.9" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="80.0" y="591.9" font-size="13" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">40</text>
+<line x1="92.0" y1="388.1" x2="920.0" y2="388.1" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="80.0" y="393.1" font-size="13" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">50</text>
+<line x1="92.0" y1="189.3" x2="920.0" y2="189.3" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="80.0" y="194.3" font-size="13" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">60</text>
+<text x="506.0" y="732.0" font-size="16" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" fill="#1f2933">Model size (MB, weights)</text>
+<text x="26" y="373.0" font-size="16" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" fill="#1f2933" transform="rotate(-90 26 373.0)">Best top-1 accuracy (%)</text>
+<circle cx="245.2" cy="406.4" r="5.5" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="316.0" cy="236.6" r="5.5" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="386.8" cy="173.6" r="5.5" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="528.4" cy="154.3" r="5.5" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="670.0" cy="133.7" r="5.5" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="245.2" cy="463.1" r="5.5" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="316.0" cy="255.9" r="5.5" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="386.8" cy="183.2" r="5.5" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="528.4" cy="154.9" r="5.5" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="670.0" cy="143.2" r="5.5" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="209.9" cy="577.9" r="5.5" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="265.2" cy="294.5" r="5.5" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="322.0" cy="192.5" r="5.5" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="439.9" cy="150.8" r="5.5" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="563.7" cy="141.8" r="5.5" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="209.9" cy="588.5" r="5.5" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<circle cx="265.2" cy="295.3" r="5.5" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<circle cx="322.0" cy="192.9" r="5.5" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<circle cx="439.9" cy="151.9" r="5.5" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<circle cx="563.7" cy="139.0" r="5.5" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<polyline points="209.9,577.9 245.2,406.4 265.2,294.5 316.0,236.6 322.0,192.5 386.8,173.6 439.9,150.8 563.7,139.0 670.0,133.7" fill="none" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 7" />
+<polygon points="858.7,108.8 867.7,117.8 858.7,126.8 849.7,117.8" fill="#111111" stroke="white" stroke-width="2.5" />
+<text x="796.7" y="105.8" font-size="12" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">baseline</text>
+<circle cx="386.8" cy="173.6" r="10.0" fill="none" stroke="#111827" stroke-width="2.4" />
+<text x="402.8" y="207.6" font-size="12" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">compact (3.7 ms)</text>
+<circle cx="670.0" cy="133.7" r="10.0" fill="none" stroke="#111827" stroke-width="2.4" />
+<text x="682.0" y="109.7" font-size="12" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">best acc (3.5 ms)</text>
+<circle cx="322.0" cy="192.5" r="10.0" fill="none" stroke="#111827" stroke-width="2.4" />
+<text x="338.0" y="164.5" font-size="12" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">knee (7.2 ms)</text>
+<circle cx="563.7" cy="141.8" r="10.0" fill="none" stroke="#111827" stroke-width="2.4" />
+<text x="579.7" y="161.8" font-size="12" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">best tradeoff (3.4 ms)</text>
+<text x="958.0" y="94.0" font-size="15" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#1f2933">Method</text>
+<circle cx="967.0" cy="115.0" r="7.0" fill="#1f77b4" stroke="#ffffff" stroke-width="2.0" />
+<text x="986.0" y="120.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Pure SVD</text>
+<circle cx="967.0" cy="145.0" r="7.0" fill="#2ca02c" stroke="#ffffff" stroke-width="2.0" />
+<text x="986.0" y="150.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Act-SVD</text>
+<circle cx="967.0" cy="175.0" r="7.0" fill="#d62728" stroke="#ffffff" stroke-width="2.0" />
+<text x="986.0" y="180.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Hybrid Tucker</text>
+<circle cx="967.0" cy="205.0" r="7.0" fill="#9467bd" stroke="#ffffff" stroke-width="2.0" />
+<text x="986.0" y="210.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Hybrid Tensorly</text>
+<polygon points="967.0,227.0 975.0,235.0 967.0,243.0 959.0,235.0" fill="#111111" stroke="white" stroke-width="2.5" />
+<text x="986.0" y="240.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Baseline</text>
+<text x="102.0" y="102.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#1f2933">Black line is the observed size/accuracy frontier.</text>
+</svg>

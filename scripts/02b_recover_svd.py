@@ -25,6 +25,7 @@ if str(PROJECT_ROOT) not in sys.path:
 from core.metrics import count_parameters, measure_latency_ms, measure_model_size_mb
 from models.baseline_vit import LightViTBaseline
 from models.compressed_vit import CompressedLightViT
+from models.tucker_vit import HybridTuckerLightViT
 
 
 CIFAR100_MEAN = (0.5071, 0.4865, 0.4409)
@@ -111,10 +112,15 @@ def build_teacher(checkpoint_path: Path, device: torch.device) -> LightViTBaseli
     return teacher
 
 
-def build_student(checkpoint_path: Path, device: torch.device) -> CompressedLightViT:
+def build_student(checkpoint_path: Path, device: torch.device) -> nn.Module:
     rank_ratio = rank_ratio_from_checkpoint(checkpoint_path)
-    student = CompressedLightViT(rank_ratio=rank_ratio)
-    student.apply_pure_svd(rank_ratio)
+    family = checkpoint_compression(checkpoint_path).get("family", "pure_svd")
+    if family == "hybrid_tucker":
+        student = HybridTuckerLightViT(rank_ratio=rank_ratio)
+        student.apply_hybrid_tucker(rank_ratio=rank_ratio)
+    else:
+        student = CompressedLightViT(rank_ratio=rank_ratio)
+        student.apply_pure_svd(rank_ratio)
     student.load_state_dict(checkpoint_state_dict(checkpoint_path))
     return student.to(device)
 
@@ -196,7 +202,7 @@ def evaluate(
 
 
 def save_recovered_checkpoint(
-    model: CompressedLightViT,
+    model: nn.Module,
     checkpoint_path: Path,
     source_checkpoint: Path,
     teacher_checkpoint: Path,
@@ -213,7 +219,7 @@ def save_recovered_checkpoint(
         "state_dict": state_dict,
         "compression": {
             "family": family,
-            "rank_ratio": model.rank_ratio,
+            "rank_ratio": float(getattr(model, "rank_ratio")),
             "source_checkpoint": str(source_checkpoint),
             "teacher_checkpoint": str(teacher_checkpoint),
             "recovered": True,
@@ -225,7 +231,7 @@ def save_recovered_checkpoint(
             "model_size_mb": measure_model_size_mb(model),
             "checkpoint_mb": 0.0,
         },
-        "recovery": {
+            "recovery": {
             "epochs": args.epochs,
             "lr": args.lr,
             "weight_decay": args.weight_decay,

@@ -1,0 +1,7 @@
+stage,family,rank_ratio,checkpoint,source_checkpoint,params,model_size_mb,checkpoint_mb,latency_ms,top1_accuracy,calibration_batches,calibration_keys,head_rank
+baseline,baseline,1.0,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,,5410084,20.6378,20.6915,3.8349,63.6000,50,25,full
+decomposed,hybrid_tucker,0.125,/home/hipra/projects/lightvit/checkpoints/hybrid/hybrid_rank_ratio_0p125.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,831808,3.1731,3.2544,3.8600,2.1600,50,25,full
+decomposed,hybrid_tucker,0.1875,/home/hipra/projects/lightvit/checkpoints/hybrid/hybrid_rank_ratio_0p1875.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,1221976,4.6615,4.7429,3.4549,4.3700,50,25,full
+decomposed,hybrid_tucker,0.25,/home/hipra/projects/lightvit/checkpoints/hybrid/hybrid_rank_ratio_0p25.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,1622804,6.1905,6.2716,4.4248,6.6900,50,25,full
+decomposed,hybrid_tucker,0.375,/home/hipra/projects/lightvit/checkpoints/hybrid/hybrid_rank_ratio_0p375.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,2454980,9.3650,9.4463,3.2345,22.3800,50,25,full
+decomposed,hybrid_tucker,0.5,/home/hipra/projects/lightvit/checkpoints/hybrid/hybrid_rank_ratio_0p5.pth,/home/hipra/projects/lightvit/checkpoints/baseline_fp32.pth,3328920,12.6988,12.7796,4.6672,41.2500,50,25,full
