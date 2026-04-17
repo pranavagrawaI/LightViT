@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect x="0" y="0" width="1200" height="760" fill="#ffffff" />
+<text x="600.0" y="36.0" font-size="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#1f2933">Rank Fraction vs Model Size</text>
+<line x1="92.0" y1="668.0" x2="920.0" y2="668.0" stroke="#334155" stroke-width="1.5" />
+<line x1="92.0" y1="78.0" x2="92.0" y2="668.0" stroke="#334155" stroke-width="1.5" />
+<line x1="141.3" y1="78.0" x2="141.3" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="141.3" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">0.1</text>
+<line x1="264.5" y1="78.0" x2="264.5" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="264.5" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">0.2</text>
+<line x1="387.7" y1="78.0" x2="387.7" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="387.7" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">0.2</text>
+<line x1="634.1" y1="78.0" x2="634.1" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="634.1" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">0.4</text>
+<line x1="880.6" y1="78.0" x2="880.6" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="880.6" y="696.0" font-size="13" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">0.5</text>
+<line x1="92.0" y1="668.0" x2="920.0" y2="668.0" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="80.0" y="673.0" font-size="13" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">0</text>
+<line x1="92.0" y1="535.6" x2="920.0" y2="535.6" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="80.0" y="540.6" font-size="13" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">5.0</text>
+<line x1="92.0" y1="403.3" x2="920.0" y2="403.3" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="80.0" y="408.3" font-size="13" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">10</text>
+<line x1="92.0" y1="270.9" x2="920.0" y2="270.9" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="80.0" y="275.9" font-size="13" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">15</text>
+<line x1="92.0" y1="138.6" x2="920.0" y2="138.6" stroke="#e2e8f0" stroke-width="1.0" />
+<text x="80.0" y="143.6" font-size="13" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">20</text>
+<text x="506.0" y="732.0" font-size="16" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" fill="#1f2933">Rank fraction</text>
+<text x="26" y="373.0" font-size="16" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" fill="#1f2933" transform="rotate(-90 26 373.0)">Model size (MB, weights)</text>
+<line x1="92.0" y1="121.7" x2="920.0" y2="121.7" stroke="#111111" stroke-width="2" stroke-dasharray="6 6" />
+<polyline points="141.3,558.8 264.5,508.4 387.7,457.9 634.1,357.1 880.6,256.2" fill="none" stroke="#1f77b4" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="141.3" cy="558.8" r="6.0" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="264.5" cy="508.4" r="6.0" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="387.7" cy="457.9" r="6.0" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="634.1" cy="357.1" r="6.0" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<circle cx="880.6" cy="256.2" r="6.0" fill="#1f77b4" stroke="white" stroke-width="2.0" />
+<polyline points="141.3,558.8 264.5,508.4 387.7,457.9 634.1,357.1 880.6,256.2" fill="none" stroke="#2ca02c" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="141.3" cy="558.8" r="6.0" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="264.5" cy="508.4" r="6.0" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="387.7" cy="457.9" r="6.0" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="634.1" cy="357.1" r="6.0" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<circle cx="880.6" cy="256.2" r="6.0" fill="#2ca02c" stroke="white" stroke-width="2.0" />
+<polyline points="141.3,584.0 264.5,544.6 387.7,504.1 634.1,420.1 880.6,331.9" fill="none" stroke="#d62728" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="141.3" cy="584.0" r="6.0" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="264.5" cy="544.6" r="6.0" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="387.7" cy="504.1" r="6.0" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="634.1" cy="420.1" r="6.0" fill="#d62728" stroke="white" stroke-width="2.0" />
+<circle cx="880.6" cy="331.9" r="6.0" fill="#d62728" stroke="white" stroke-width="2.0" />
+<polyline points="141.3,584.0 264.5,544.6 387.7,504.1 634.1,420.1 880.6,331.9" fill="none" stroke="#9467bd" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="141.3" cy="584.0" r="6.0" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<circle cx="264.5" cy="544.6" r="6.0" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<circle cx="387.7" cy="504.1" r="6.0" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<circle cx="634.1" cy="420.1" r="6.0" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<circle cx="880.6" cy="331.9" r="6.0" fill="#9467bd" stroke="white" stroke-width="2.0" />
+<text x="916.0" y="113.7" font-size="12" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">baseline size</text>
+<text x="958.0" y="94.0" font-size="15" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#1f2933">Method</text>
+<circle cx="967.0" cy="115.0" r="7.0" fill="#1f77b4" stroke="#ffffff" stroke-width="2.0" />
+<text x="986.0" y="120.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Pure SVD</text>
+<circle cx="967.0" cy="145.0" r="7.0" fill="#2ca02c" stroke="#ffffff" stroke-width="2.0" />
+<text x="986.0" y="150.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Act-SVD</text>
+<circle cx="967.0" cy="175.0" r="7.0" fill="#d62728" stroke="#ffffff" stroke-width="2.0" />
+<text x="986.0" y="180.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Hybrid Tucker</text>
+<circle cx="967.0" cy="205.0" r="7.0" fill="#9467bd" stroke="#ffffff" stroke-width="2.0" />
+<text x="986.0" y="210.0" font-size="14" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="400" fill="#1f2933">Hybrid Tensorly</text>
+</svg>

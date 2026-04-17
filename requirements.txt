@@ -4,3 +4,4 @@ torchaudio>=2.2
 numpy>=1.26
 tqdm>=4.66
 timm>=1.0
+tensorly>=0.9
